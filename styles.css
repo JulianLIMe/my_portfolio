@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Permite deslizar al hacer click en links del MENU */
+}
+
+/* MENU ENCABEZADO */
+.contenedor-header {
+    background: #1e2326;
+    position: fixed; /* Permite que el MENU se mantenga en el mismo lugar incluso si la pagina es scrolled */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99; /* Esta propiedad permite ubicar un elemento sobre otro (como la 3ra dimension, solapamiento), y funsiona siempre que se halla definido la propiedad position, no funciona con position: static */
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo .maquina-escribir {
+    display: block;
+    font-size: 40px;
+    color: #1CB698;
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 2s steps(14);
+    overflow: hidden;
+    cursor: default;
+}
+@keyframes typing {
+    from {width: 0%;}
+    to {width: 110%;}
+}
+
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none; /* Elimina viñetas de unorder list */
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    text-decoration: none;
+    color: #fff;
+    margin: 0, 25px;
+    padding: 5px;
+    transition: .3s; /* Efecto de transicion para el :hover */
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #1CB698;
+}
+
+.nav-responsive {
+    background-color: #1CB698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION INICIO */
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.5), rgba(30,35,38,1)), url('images/legos.jpg'); /* gradient/degradado permite mostrar transiciones suaves entre dos o mas colores */
+    background-size: cover;
+    height: 100vh; /* vh (viewport height es una medidad que se adapta al viewport del navegador, 1vh = 1/100, si el nav tiene un height de 900px el vh = 1/100 * 900 = 9px), asi 100vh siempre toma el alto total del viewport del navegador */
+    color: #fff;
+    display: flex;
+    align-items: center; /* Alineacion horizontal de un contenedor flex */
+}
+
+.inicio .contenedor-banner {
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center; /* Centra el texto de un elemento */
+    border-radius: 40px;
+}
+
+.inicio .contenedor-banner img {
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    border-radius: 100%;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.inicio .contenedor-banner h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+
+.inicio .contenedor-banner h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenedor-banner a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px; /* Permite alinear el contenido de un elemnto en el centro basado en el valor de height */
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenedor-banner a:hover {
+    background-color: #1CB698;
+}
+
+/* SECCION SOBRE MI */
+.sobremi {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    /* height: 100vh; */
+}
+
+.sobremi .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.sobremi h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 40px 0;
+}
+
+.sobremi .contenido-seccion p {
+    font: 19px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+
+.sobremi .fila {
+    display: flex;
+}
+
+.sobremi .fila .col {
+    width: 50%; /* 50% del ancho del padre --> padre (div.contenido-seccion) ancho=1100px, hijo (dos div.col) ancho=50%Padre */
+}
+
+.sobremi .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.sobremi .fila .col ul {
+    list-style: none;
+}
+
+.sobremi .fila .col ul li {
+    margin: 12px 0;
+}
+
+.sobremi .fila .col ul li strong {
+    display: inline-block;
+    color: #1CB698;
+    width: 100px;
+}
+
+.sobremi .fila .col ul li span {
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sobremi .fila .col .contenedor-intereses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes {
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+    color: #1CB698;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    margin-top: 30px;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative; /* Permite mover el elemento (cambiarlo de lugar) a partir de su posicion normal, esto dentro del espacio de su elemento padre y sin afectar la posicion de otros elemento */
+    z-index: 10;
+}
+
+.sobremi button .overlay { /* Efecto overlay */
+    position: absolute; /* Hace que este elemento salga del flujo normal de la pagina afectando la posicion de los demas elementos, con top, right, left , botton se indiva la nueva posicion del elemento */
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay {
+    width: 100%;
+}
+
+/* SECCION SKILLS */
+.skills {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 40px 0;
+}
+
+.skills .fila {
+    display: flex;
+}
+
+.skills .fila .col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.skills .skill > span { /* Los estilos se aplican al contenedor .skills .skill pero no se aplican al contenido de tag/etiqueta span */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill {
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.skills .skill .progreso {
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1CB698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+/* Las siguientes clases se agregan dinamicamente desde un archvo JS */
+.skills .skill .htmlcss {
+    width: 0%;
+    animation: 3s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 90%;}
+
+}
+.skills .skill .javascriptnode {
+    width: 0%;
+    animation: 3s javascriptnode forwards;
+}
+@keyframes javascriptnode {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .react {
+    width: 0%;
+    animation: 3s react forwards;
+}
+@keyframes react {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .sql {
+    width: 0%;
+    animation: 3s sql forwards;
+}
+@keyframes sql {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .mongodb {
+    width: 0%;
+    animation: 3s mongodb forwards;
+}
+@keyframes mongodb {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .python {
+    width: 0%;
+    animation: 3s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .git {
+    width: 0%;
+    animation: 3s git forwards;
+}
+@keyframes git {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .trabajoenequipo {
+    width: 0%;
+    animation: 3s trabajoenequipo forwards;
+}
+@keyframes trabajoenequipo {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+.skills .skill .comunicacion {
+    width: 0%;
+    animation: 3s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .empatia {
+    width: 0%;
+    animation: 3s empatia forwards;
+}
+@keyframes empatia {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .responsabilidad {
+    width: 0%;
+    animation: 2s responsabilidad forwards;
+}
+@keyframes responsabilidad {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+/* SECCION CURRICULUM */
+.curriculum {
+    background: linear-gradient(to top, rgba(30,35,38,.5), rgba(30,35,38,1)), url('images/travel.jpg');
+    background-size: cover;
+    /* background-color: #1e2326; */
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.curriculum .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.curriculum h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.curriculum .fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.curriculum .fila .col {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.curriculum .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.curriculum .fila .izquierda {
+    border-right: 2px solid #252A2E;
+}
+.curriculum .fila .derecha {
+    border-left: 2px solid #252A2E;
+}
+
+.curriculum .fila .item {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    position: relative;
+}
+
+.curriculum .fila .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item .instituto {
+    color: #1CB698;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.curriculum .fila .item .fecha {
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item p {
+    line-height: 25px; /* Establece la altura de un texto, distribuye las lineas del texto equitativamente */
+}
+
+.curriculum .fila .izq {
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+}
+.curriculum .fila .der {
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+}
+
+.curriculum .fila .item .conectori {
+    height: 2px;
+    width: 47px;
+    background-color: #1CB698;
+    position: absolute; /* Para solapar el conector sobre el elmento item, en linwa 500 se saca de itm hacia el costado derecho */
+    top: 50%;
+    right: -47px;
+}
+.curriculum .fila .item .conectori .circuloi {
+    height: 10px;
+    width: 10px;
+    background-color: #1CB698;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4px;
+    float: right; /* float permite ubicar un elemento a la izq o der de su contenedor, permite a los textos y elementos en linea aparecer a su costado, el elemento es removido del flujo normal aunque sigue siendo parte de este (a diferencia de position: absolute) */
+}
+
+.curriculum .fila .item .conectord {
+    height: 2px;
+    width: 47px;
+    background-color: #1CB698;
+    position: absolute; 
+    top: 50%;
+    left: -47px;
+}
+.curriculum .fila .item .conectord .circulod {
+    height: 10px;
+    width: 10px;
+    background-color: #1CB698;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4px;
+    float: left; 
+}
+
+/* SECCION PORTFOLIO */
+
+.portfolio {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.portfolio .galeria {
+    display: flex; /* Modelo unidimensional de layout(esquema de distribucion de los elementos dentro un diseño de pag web, ó medios impresos), es decir que flexbox maneja el layout en una sola dimension a la vez - ya sea como fila o columnas */
+    flex-wrap: wrap; /* Especifica si los elementos hijos son obligados a permanecer en una misma linea o pueden fluir en varias lineas, wrap lo permite, y nowrap distribuye los elemtos en una sola linea (opcion por defecto) */
+}
+
+.portfolio .galeria .proyecto {
+    position: relative;
+    max-width: 340px;
+    height: fit-content; /* Ajusta el height del elemento para mantener un valance, por ejemplo si se tiene un imagen con un ancho definido el alto sera tal que la imag no pierda su formato/escala */
+    margin: 10px;
+    cursor: pointer;
+}
+
+.portfolio .galeria .proyecto img {
+    width: 100%;
+    display: block;
+}
+
+.portfolio .galeria .proyecto .overlay { /* Junto con:hover se crea efecto overline */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Centrado horizontal */
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+
+.portfolio .galeria .proyecto .overlay h3 {
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.portfolio .galeria .proyecto .overlay:hover {
+    opacity: 1;
+}
+
+.portfolio .galeria .proyecto .overlay:hover h3 {
+    margin-bottom: 0;
+}
+
+/* SECCION CONTACTO */
+
+.contacto {
+    background: linear-gradient(to top, rgba(30,35,38,.7), rgba(30,35,38,.8)), url('images/compañerismo.jpg');
+    background-size: cover;
+    width: 100%;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto .contenido-seccion .center {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    padding-top: 40px;
+    text-align: center;
+}
+
+.contacto p {
+    margin: 0 auto;
+    max-width: 550px;
+    font-size: 20px;
+}
+
+.contacto .center .division {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    height: 2px;
+    background-color: #1CB698;
+}
+
+.contacto .contenido-seccion .contacto-form {
+    max-width: 560px;
+    margin: 20px auto;
+    padding: 0;
+    display: block;
+}
+
+.contacto .input-wrapper {
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contacto .input-wrapper label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1CB698;
+    /* margin-bottom: 10px; */
+    font-size: 16px;
+}
+
+.contacto .input-wrapper input {
+    position: relative;
+    background: 0;
+    width: 100%;
+    border: none;
+    padding: 10px 0 10px;
+    color: #f2f2f2;
+    font-size: 16px;
+    resize: none;
+    display: block;
+    overflow: hidden;
+    outline: 0;
+}
+
+.contacto .input-wrapper textarea {
+    position: relative;
+    background: 0;
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 20px 0 10px;
+    color: #f2f2f2;
+    font-size: 16px;
+    resize: none;
+    display: block;
+    overflow: hidden;
+    outline: 0;
+}
+
+.contacto .input-wrapper span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1CB698;
+}
+
+.contacto .contenido-seccion button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 50px auto 20px;
+    padding: 10px 22px;
+    font-size: 16px;
+    color:#fff;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto .contenido-seccion button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contacto .contenido-seccion button:hover .overlay {
+    width: 100%;
+} 
+
+footer {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes {
+    margin-bottom: 20px;
+}
+
+footer .redes a {
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px 5px;
+    font-size: 20px;
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 980px) {
+    nav {
+        display: none;
+    }
+    .nav-responsive {
+        display: block;
+    }
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+        opacity: .6;
+    }
+    nav.responsive ul {
+        display: block !important;
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .sobremi .fila {
+        display: block;
+    }
+    .sobremi .fila .col {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .skills .fila {
+        display: block;
+        padding: 0 50px;
+    }
+    .skills .fila .col {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .skills .skill .barra-skill {
+        width: 100%;
+    }
+
+    .curriculum .fila {
+        display: block;
+    }
+    .curriculum .izquierda h3 {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 20px;
+    }
+    .curriculum .fila .col {
+        width: 90%;
+    }
+
+    .portfolio .galeria {
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto {
+        padding-bottom: 10px;
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .contacto .contenido-seccion {
+        padding: 0 20px;
+    }
+}
+
+

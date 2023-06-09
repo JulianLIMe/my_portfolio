@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/527c94b369.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="/images/perfil_icon.png" />
+    <title>Julian Linero</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <p class="maquina-escribir"> ¡Hola mundo!</p>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="monstrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenedor-banner">
+            <div class="contenedor-img">
+                <img src="images/personalFotoCirc.png" alt="julian">
+            </div>
+            <h1>JULIAN LINERO</h1>
+            <h2>Desarrollador Web</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/julian-linero-85a307207/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/linerojulianan1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/JulianLIMe" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.link/31xlpw" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p>
+                <span>Hola, soy Julian</span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim facilis, deleniti perferendis ad laborum reprehenderit tenetur iure, doloremque asperiores, quo itaque inventore corporis temporibus quidem harum nam maxime mollitia magnam?
+            </p>
+
+            <div class="fila">
+                <!-- Datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Email</strong>
+                            linero.julian.andres@gmail.com
+                        </li>
+                        <li>
+                            <strong>Telefono</strong>
+                            +573022994106
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                        <li>
+                            <strong>Ubicacion</strong>
+                            Medellin-Antioquia
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Interese -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-sharp fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-code"></i>
+                            <span>PROGRAMAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>AI</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://drive.google.com/file/d/1_Y2rYorQiNd7KRLpW6QtK4TgI_XcWIfY/view?usp=sharing" target="_blank" style="text-decoration: none;">
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+            
+
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skills -->
+                <div class="col">
+
+                    <h3>Technical Skills</h3>
+
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>JavaScript & Node</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>MongoDB</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Git & GitHub</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Professional Skill -->
+                <div class="col">
+
+                    <h3>Professional Skill</h3>
+
+                    <div class="skill ">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Comunicacion</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Empatia</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Responsabilidad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section class="curriculum" id="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educacion</h3>
+                    
+                    <div class="item izq">
+                        <h4>Tecnico en Sistemas</h4>
+                        <span class="instituto">SENA</span>
+                        <span class="fecha">2016 - 2017</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dignissimos id animi, ut quisquam accusantium voluptates consequuntur maiores, corrupti voluptate nemo nihil, explicabo placeat perspiciatis! Repudiandae quis vitae velit at.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                    <div class="item izq">
+                        <h4>Ingenieria Electronica (PAUSA)</h4>
+                        <span class="instituto">ITM Medellin</span>
+                        <span class="fecha">2019 - 2022</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dignissimos id animi, ut quisquam accusantium voluptates consequuntur maiores, corrupti voluptate nemo nihil, explicabo placeat perspiciatis! Repudiandae quis vitae velit at.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                    <div class="item izq">
+                        <h4>Developer Full Stack</h4>
+                        <span class="instituto">Bootcamp Henry</span>
+                        <span class="fecha">06/2022 - 12/2022</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dignissimos id animi, ut quisquam accusantium voluptates consequuntur maiores, corrupti voluptate nemo nihil, explicabo placeat perspiciatis! Repudiandae quis vitae velit at.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+
+                    <div class="item der">
+                        <h4>Tecnico de aires acondicionados</h4>
+                        <span class="instituto">Aires Anacona</span>
+                        <span class="fecha">06/2020 - 10/2021</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dignissimos id animi, ut quisquam accusantium voluptates consequuntur maiores, corrupti voluptate nemo nihil, explicabo placeat perspiciatis! Repudiandae quis vitae velit at.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Developer Full Stack</h4>
+                        <span class="instituto">Academia Henry</span>
+                        <span class="fecha">06/2022 - 12/2022</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dignissimos id animi, ut quisquam accusantium voluptates consequuntur maiores, corrupti voluptate nemo nihil, explicabo placeat perspiciatis! Repudiandae quis vitae velit at.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+
+            <div class="galeria">
+
+                <div class="proyecto">
+                    <img src="/images/pokeApi.png" alt="pokeapi">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografia</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="/images/clima.png" alt="pokeapi">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografia</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="/images/ppt.png" alt="pokeapi">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografia</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="/images/tresEnRaya.jpg" alt="pokeapi">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografia</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <div class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            
+            <div class="center">
+                <h2>PÓNGASE EN CONTACTO</h2>
+                <span class="division"></span>
+                <p>¿Tienes algún proyecto en mente o simplemente quieres saludarme? No dudes en enviarme un mensaje.</p>
+
+            </div>
+
+            <form action="https://formsubmit.co/linero.julian.andres@gmail.com" method="POST" class="contacto-form">
+                <div class="input-wrapper">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="contact-input">
+                    <span></span>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="contac-input">
+                    <span></span>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" name="asunto" class="contac-input">
+                    <span></span>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id=""></textarea>
+                    <span></span>
+                </div> 
+
+                <button type="submit">
+                    Enviar <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/julian-linero-85a307207/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/linerojulianan1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/JulianLIMe" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.link/31xlpw" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
